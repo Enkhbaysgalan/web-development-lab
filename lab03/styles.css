@@ -1,0 +1,403 @@
+/* =========================================================
+   Лаборатори 03 — HTML формыг CSS-ээр загварчлах
+   External styles.css
+   ========================================================= */
+
+/* 1. Өнгө, фонт, тогтмол хэмжээ (design tokens) */
+:root {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1e3a8a;
+  --color-primary-light: #dbeafe;
+  --color-accent: #f59e0b;
+  --color-danger: #dc2626;
+  --color-bg: #f1f5f9;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f8fafc;
+  --color-text: #1f2937;
+  --color-muted: #64748b;
+  --color-border: #cbd5e1;
+  --radius: 10px;
+  --shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box; /* border-box = box model-ийг тооцоход хялбар */
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* 2. Гарчиг / header — class соногч */
+.site-header {
+  position: relative; /* badge-ийн absolute байрлалын эхлэл */
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+  color: #fff;
+  padding: 24px 32px;              /* padding: доторх зай */
+  border-bottom: 4px solid var(--color-accent); /* border */
+}
+
+.site-header h1 {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: 28px;
+  margin: 0 0 12px;
+}
+
+/* position: relative/absolute жишээ 1 — badge */
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 12px;               /* padding */
+  border: 2px solid #fff;          /* border */
+  border-radius: 999px;            /* border-radius */
+  letter-spacing: 0.5px;
+}
+
+/* Навигацийн цэс */
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;               /* padding */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* border */
+  border-radius: var(--radius);    /* border-radius */
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.site-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+/* 3. Үндсэн контент */
+.content {
+  max-width: 900px;
+  margin: 32px auto;               /* margin: гаднах зай, төвд байрлуулах */
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);   /* border */
+  border-radius: var(--radius);            /* border-radius */
+  box-shadow: var(--shadow);
+  padding: 28px;                            /* padding */
+  margin-bottom: 24px;                      /* margin */
+}
+
+/* Гарчгийн шошго — class соногч */
+.section-title {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: 24px;
+  color: var(--color-primary-dark);
+  margin: 0 0 8px;
+  padding-left: 12px;
+  border-left: 5px solid var(--color-primary); /* border */
+}
+
+.section-note {
+  margin: 0 0 20px;
+  color: var(--color-muted);
+}
+
+/* 4. Форм — fieldset / legend / талбарууд */
+fieldset {
+  border: 1px solid var(--color-border);   /* border */
+  border-radius: var(--radius);            /* border-radius */
+  background: var(--color-surface-alt);
+  padding: 20px;                            /* padding */
+  margin: 0 0 20px;                         /* margin */
+}
+
+legend {
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 700;
+  color: var(--color-primary);
+  padding: 0 10px;                          /* padding */
+}
+
+.field {
+  margin-bottom: 16px;                      /* margin: талбаруудын хоорондын зай */
+}
+
+.field-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--color-text);
+}
+
+/* Шаардлагатай талбарын тэмдэг */
+.field-label .req {
+  color: var(--color-danger);
+  margin-left: 4px;
+}
+
+.field-input {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-surface);
+  padding: 10px 12px;                       /* padding: талбар "амьсгалах" */
+  border: 1px solid var(--color-border);    /* border */
+  border-radius: 8px;                       /* border-radius */
+  margin-top: 4px;                          /* margin */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field-input::placeholder {
+  color: #94a3b8;
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.field-input:user-invalid {
+  border-color: var(--color-danger);
+  background: #fef2f2;
+}
+
+textarea.field-input {
+  max-width: 100%;
+  resize: vertical;
+}
+
+input[type="file"].field-input {
+  padding: 8px;
+}
+
+/* Радио / чекбокс бүлэг */
+.choice-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-top: 4px;
+}
+
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.choice:hover {
+  border-color: var(--color-primary);
+}
+
+.choice input {
+  accent-color: var(--color-primary);
+  margin: 0;
+}
+
+.choice label {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* position: relative/absolute жишээ 2 — tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-left: 6px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+  cursor: help;
+}
+
+.tooltip .tooltip-text {
+  position: absolute;
+  bottom: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0f172a;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease;
+  z-index: 20;
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid transparent;
+  border-top-color: #0f172a;
+}
+
+.tooltip:hover .tooltip-text {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 5. Товчлуурууд — class соногч */
+.form-actions {
+  margin-top: 8px;
+}
+
+.btn {
+  font: inherit;
+  font-weight: 700;
+  padding: 11px 24px;                       /* padding */
+  margin: 0 10px 10px 0;                    /* margin */
+  border: 1px solid transparent;            /* border */
+  border-radius: var(--radius);             /* border-radius */
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-bg);
+}
+
+/* 6. Сонирхлын жагсаалт */
+.interests-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.interests-list li {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-accent);
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-bottom: 10px;
+}
+
+.interests-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* 7. Дүнгийн хүснэгт */
+.grades-table {
+  width: 100%;
+  max-width: 520px;
+  border-collapse: collapse;
+  margin-top: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.grades-table th,
+.grades-table td {
+  border: 1px solid var(--color-border);
+  padding: 10px 16px;
+  text-align: left;
+}
+
+.grades-table thead th {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-family: "Roboto Slab", Georgia, serif;
+}
+
+.grades-table tbody tr:nth-child(even) {
+  background-color: var(--color-surface-alt);
+}
+
+.grades-table tbody tr:hover {
+  background-color: var(--color-primary-light);
+}
+
+/* 8. Хөл хэсэг */
+.site-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* 9. Утасны дэлгэцэд тохирсон (responsive) */
+@media (max-width: 640px) {
+  .site-nav ul {
+    flex-direction: column;
+  }
+
+  .content {
+    margin: 16px auto;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .badge {
+    position: static;
+    display: inline-block;
+    margin-top: 8px;
+  }
+}
