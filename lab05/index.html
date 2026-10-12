@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<!-- Responsive-ийн үндсэн шошго: гар утас дээр хэмжээг төхөөрөмжийн өргөнтэй тэнцүүлнэ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лаборатори 05: Responsive вэб хуудас</title>
+<link rel="stylesheet" href="styles.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- HEADER: логотип + responsive навигацийн цэс -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="#">Веб Академи</a>
+    <!-- Гар утасны навигацийг өөрчлөх checkbox-хак (JS шаардлагагүй) -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Цэсийг нээх/хаах">
+      <span class="icon-open">&#9776;</span>
+      <span class="icon-close">&#10005;</span>
+    </label>
+    <nav class="site-nav" id="main-nav">
+      <ul>
+        <li><a href="#">Нүүр</a></li>
+        <li><a href="#courses">Хичээлүүд</a></li>
+        <li><a href="#wireframe">Wireframe</a></li>
+        <li><a href="#contact">Холбоо</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>Вэб хөгжүүлэлтийн эхлэл</h1>
+    <p>Mobile-First бодолцоогоор бүтээсэн, бүх дэлгэц дээр тохирсон статик вэб хуудас. Media Queries ашиглан компьютер, таблет, гар утасны хувилбаруудыг нэг файлд шийдсэн.</p>
+    <a class="btn btn-primary" href="#courses">Хичээлүүд үзэх</a>
+    <a class="btn btn-secondary" href="#wireframe">Wireframe харах</a>
+  </div>
+  <div class="hero-art" role="img" aria-label="Иллюстраци баайрлал">&lt;/&gt;</div>
+</section>
+
+<!-- ХИЧЭЭЛҮҮД: CSS Grid картууд -->
+<section class="section" id="courses">
+  <h2 class="section-title">Сургалтын хичээлүүд</h2>
+  <p class="section-note">Энэ грид <strong>max-width: 1024px</strong> болон <strong>max-width: 640px</strong> media query-гаар баганаараа хувиарлана.</p>
+
+  <div class="cards">
+    <article class="card">
+      <span class="tag">Анхан</span>
+      <h3>HTML семантик</h3>
+      <p>Бүтэцтэй, уншихад хялбар хуудас бэлтгэх шошгууд.</p>
+      <span class="meta">4 долоо хоног</span>
+    </article>
+    <article class="card">
+      <span class="tag">Анхан</span>
+      <h3>CSS загварчлал</h3>
+      <p>Box model, class соногч, тогтмол дизайн токенууд.</p>
+      <span class="meta">5 долоо хоног</span>
+    </article>
+    <article class="card">
+      <span class="tag">Дунд</span>
+      <h3>Flexbox &amp; Grid</h3>
+      <p>Олон баганатай layout-ыг хослуулан зохион байгуулах.</p>
+      <span class="meta">4 долоо хоног</span>
+    </article>
+    <article class="card">
+      <span class="tag">Дунд</span>
+      <h3>Responsive дизайн</h3>
+      <p>Media queries, mobile-first, бүтээцийн шилжилт.</p>
+      <span class="meta">3 долоо хоног</span>
+    </article>
+    <article class="card">
+      <span class="tag">Дээд</span>
+      <h3>Wireframe &amp; UX</h3>
+      <p>Эх макет зурах, хэрэглэгчийн замыг төлөвлөх.</p>
+      <span class="meta">2 долоо хоног</span>
+    </article>
+    <article class="card">
+      <span class="tag">Дээд</span>
+      <h3>Git &amp; GitHub Pages</h3>
+      <p>Кодоо хадгалж, вэбээр олон нийтэд түгээх.</p>
+      <span class="meta">2 долоо хоног</span>
+    </article>
+  </div>
+</section>
+
+<!-- WIREFRAME ХЭСЭГ -->
+<section class="section" id="wireframe">
+  <h2 class="section-title">Эх макет (Wireframe)</h2>
+  <p class="section-note">Энэ хуудасны компьютер болон гар утасны wireframe-үүд — дэлгэцийн хэмжээнээс хамаарч доогуур баганаар жагсана.</p>
+
+  <div class="wireframes">
+    <figure class="wireframe-item">
+      <img src="wireframe-desktop.svg" alt="Компьютерийн wireframe: header, hero, 3 баганатай грид, footer">
+      <figcaption>Компьютер (1200px) — header, hero 2 багана, 3 картын грид, footer</figcaption>
+    </figure>
+    <figure class="wireframe-item">
+      <img src="wireframe-mobile.svg" alt="Гар утасны wireframe: гамбургер цэс, баганаар жагссан элементүүд">
+      <figcaption>Гар утас (375px) — гамбургер цэс, бүх элемент баганаар дараалан</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- MEDIA QUERY МЭДЭЭЛЭЛ -->
+<section class="section" id="breakpoints">
+  <h2 class="section-title">Ашигласан Media Queries</h2>
+  <div class="cards">
+    <article class="card bp-card">
+      <h3>Компьютер</h3>
+      <p class="bp-code">&gt; 1024px</p>
+      <p>3 баганатай грид, хэвтээ навигацийн цэс.</p>
+    </article>
+    <article class="card bp-card">
+      <h3>Таблет</h3>
+      <p class="bp-code">@media (max-width: 1024px)</p>
+      <p>Карт 2 багана, hero нэг багана болно.</p>
+    </article>
+    <article class="card bp-card">
+      <h3>Гар утас</h3>
+      <p class="bp-code">@media (max-width: 640px)</p>
+      <p>Нэг багана + гамбургер цэсээр навигацийг өөрчилнө.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ХОЛБОО / FOOTER -->
+<footer class="site-footer" id="contact">
+  <div class="footer-inner">
+    <p>&copy; 2026 Веб зохиомж хичээл. Бүх эрх хуулиар хамгаалагдсан.</p>
+    <ul class="footer-links">
+      <li><a href="#">Нүүр</a></li>
+      <li><a href="#courses">Хичээлүүд</a></li>
+      <li><a href="#">Тусламж</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

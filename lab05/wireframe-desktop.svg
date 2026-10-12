@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" font-family="Arial, sans-serif">
+  <!-- Лаб 05: Wireframe — Компьютер (Desktop) хувилбар, 1200px -->
+  <rect x="0" y="0" width="1200" height="800" fill="#ffffff" stroke="#334155" stroke-width="2"/>
+  <text x="16" y="24" font-size="14" fill="#64748b">DESKTOP 1200px — Wireframe</text>
+
+  <!-- Header + Nav (Flexbox) -->
+  <rect x="0" y="36" width="1200" height="70" fill="#e2e8f0" stroke="#94a3b8"/>
+  <rect x="40" y="54" width="170" height="34" rx="6" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="60" y="76" font-size="14" fill="#475569">Логотип</text>
+  <rect x="740" y="54" width="90" height="34" rx="17" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="844" y="54" width="90" height="34" rx="17" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="948" y="54" width="90" height="34" rx="17" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="1052" y="54" width="90" height="34" rx="17" fill="#ffffff" stroke="#94a3b8"/>
+  <text x="756" y="76" font-size="13" fill="#475569">Нүүр</text>
+  <text x="858" y="76" font-size="13" fill="#475569">Хичээл</text>
+  <text x="960" y="76" font-size="13" fill="#475569">Wireframe</text>
+  <text x="1064" y="76" font-size="13" fill="#475569">Холбоо</text>
+  <text x="40" y="130" font-size="13" fill="#64748b">Header — Flexbox: logo зөв / nav баруун</text>
+
+  <!-- Hero -->
+  <rect x="40" y="150" width="1120" height="200" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6 4"/>
+  <rect x="70" y="185" width="520" height="28" rx="4" fill="#cbd5e1"/>
+  <rect x="70" y="225" width="440" height="16" rx="4" fill="#e2e8f0"/>
+  <rect x="70" y="249" width="400" height="16" rx="4" fill="#e2e8f0"/>
+  <rect x="70" y="285" width="150" height="40" rx="8" fill="#94a3b8"/>
+  <text x="96" y="310" font-size="14" fill="#ffffff">CTA товч</text>
+  <rect x="660" y="175" width="470" height="150" rx="8" fill="#e2e8f0" stroke="#94a3b8"/>
+  <line x1="660" y1="175" x2="1130" y2="325" stroke="#cbd5e1"/>
+  <line x1="1130" y1="175" x2="660" y2="325" stroke="#cbd5e1"/>
+  <text x="850" y="255" font-size="14" fill="#64748b">Зураг / иллюстраци</text>
+  <text x="40" y="370" font-size="13" fill="#64748b">Hero — Grid: 2 багана (текст + зураг)</text>
+
+  <!-- Секцийн гарчиг -->
+  <rect x="40" y="392" width="6" height="26" fill="#2563eb"/>
+  <text x="58" y="412" font-size="20" fill="#1e3a8a" font-weight="bold">Секцийн гарчиг (h2)</text>
+
+  <!-- 3-н картын грид -->
+  <rect x="40" y="430" width="357" height="160" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="414" y="430" width="357" height="160" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="788" y="430" width="357" height="160" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="60" y="450" width="70" height="20" rx="10" fill="#dbeafe"/>
+  <rect x="434" y="450" width="70" height="20" rx="10" fill="#dbeafe"/>
+  <rect x="808" y="450" width="70" height="20" rx="10" fill="#dbeafe"/>
+  <rect x="60" y="482" width="180" height="18" rx="4" fill="#cbd5e1"/>
+  <rect x="434" y="482" width="180" height="18" rx="4" fill="#cbd5e1"/>
+  <rect x="808" y="482" width="180" height="18" rx="4" fill="#cbd5e1"/>
+  <rect x="60" y="512" width="300" height="12" rx="4" fill="#e2e8f0"/>
+  <rect x="60" y="532" width="260" height="12" rx="4" fill="#e2e8f0"/>
+  <rect x="434" y="512" width="300" height="12" rx="4" fill="#e2e8f0"/>
+  <rect x="434" y="532" width="260" height="12" rx="4" fill="#e2e8f0"/>
+  <rect x="808" y="512" width="300" height="12" rx="4" fill="#e2e8f0"/>
+  <rect x="808" y="532" width="260" height="12" rx="4" fill="#e2e8f0"/>
+  <rect x="60" y="558" width="110" height="14" rx="4" fill="#fde68a"/>
+  <rect x="434" y="558" width="110" height="14" rx="4" fill="#fde68a"/>
+  <rect x="808" y="558" width="110" height="14" rx="4" fill="#fde68a"/>
+  <text x="40" y="612" font-size="13" fill="#64748b">CSS Grid: repeat(3, 1fr) + gap — 3 багана</text>
+
+  <!-- Wireframe хэсэг -->
+  <rect x="40" y="630" width="550" height="70" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6 4"/>
+  <rect x="610" y="630" width="550" height="70" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6 4"/>
+  <text x="230" y="672" font-size="14" fill="#64748b">Wireframe: Desktop</text>
+  <text x="815" y="672" font-size="14" fill="#64748b">Wireframe: Mobile</text>
+
+  <!-- Footer -->
+  <rect x="0" y="730" width="1200" height="70" fill="#cbd5e1" stroke="#94a3b8"/>
+  <rect x="40" y="752" width="300" height="14" rx="4" fill="#ffffff"/>
+  <rect x="920" y="752" width="60" height="14" rx="4" fill="#ffffff"/>
+  <rect x="995" y="752" width="60" height="14" rx="4" fill="#ffffff"/>
+  <rect x="1070" y="752" width="60" height="14" rx="4" fill="#ffffff"/>
+  <text x="40" y="795" font-size="13" fill="#475569">Footer — Flexbox: текст зөв / холбоосууд баруун</text>
+</svg>
