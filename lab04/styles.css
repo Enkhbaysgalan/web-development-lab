@@ -3,10 +3,10 @@
    External styles.css
    ========================================================= */
 
-/* 1. Өнгө, фонт, тогтмол хэмжээ (design tokens) */
+/* 1. ungu, font, togmol hemjee (design tokens) */
 :root {
-  --color-primary: #2563eb;
-  --color-primary-dark: #1e3a8a;
+  --color-primary: #08caf6;
+  --color-primary-dark: #14167e;
   --color-primary-light: #dbeafe;
   --color-accent: #f59e0b;
   --color-danger: #dc2626;
@@ -37,9 +37,6 @@ a {
   color: var(--color-primary);
 }
 
-/* =========================================================
-   HEADER — Flexbox: гарчиг + badge нэг мөр
-   ========================================================= */
 .site-header {
   background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
   color: #fff;
@@ -48,10 +45,10 @@ a {
 }
 
 .header-inner {
-  display: flex;                        /* FLEXBOX */
-  justify-content: space-between;       /* шаардлагатай шинж чанар */
-  align-items: center;                  /* шаардлагатай шинж чанар */
-  gap: 16px;                            /* шаардлагатай шинж чанар */
+  display: flex;                        
+  justify-content: space-between;       
+  align-items: center;                  
+  gap: 16px;                       
 }
 
 .site-header h1 {
@@ -71,15 +68,12 @@ a {
   white-space: nowrap;
 }
 
-/* =========================================================
-   ШААРДЛАГА 1: NAVIGATION BAR — FLEXBOX
-   ========================================================= */
 .site-nav ul {
-  display: flex;                        /* FLEXBOX */
-  justify-content: flex-start;          /* баруун талаас зэрэгцүүлэх */
-  align-items: center;                  /* босоо тэгшлэх */
-  gap: 10px;                            /* элементүүдийн хоорондын зай */
-  flex-wrap: wrap;                      /* нарийвч дээр дарж нэхэхгүй */
+  display: flex;                      
+  justify-content: flex-start;          
+  align-items: center;                
+  gap: 10px;                         
+  flex-wrap: wrap;                   
   list-style: none;
   margin: 16px 0 0;
   padding: 0;
@@ -102,15 +96,11 @@ a {
   transform: translateY(-2px);
 }
 
-/* =========================================================
-   ШААРДЛАГА 2: ХУУДСНЫ ҮНДСЕН БҮТЭЦ — CSS GRID
-   (агуулгын хэсэг + sidebar = 2 багана)
-   ========================================================= */
 .page {
-  display: grid;                                        /* CSS GRID */
-  grid-template-columns: minmax(0, 1fr) 300px;          /* main + sidebar */
-  gap: 24px;                                            /* багануудын хоорондын зай */
-  align-items: start;                                   /* багануудыг дээд талаар тэгшлэх */
+  display: grid;                                      
+  grid-template-columns: minmax(0, 1fr) 300px;        
+  gap: 24px;                                         
+  align-items: start;                                 
   max-width: 1140px;
   margin: 32px auto;
   padding: 0 20px;
@@ -120,13 +110,10 @@ a {
   min-width: 0;
 }
 
-/* =========================================================
-   ҮНДСЕН АГУУЛГЫН ГРИД: 3+ БАГАНАТАЙ КАРТУУД
-   ========================================================= */
 .cards-grid {
-  display: grid;                                        /* CSS GRID */
-  grid-template-columns: repeat(3, 1fr);                /* 3 багана */
-  gap: 20px;                                            /* картуудын хоорондын зай */
+  display: grid;                                    
+  grid-template-columns: repeat(3, 1fr);              
+  gap: 20px;                                            
 }
 
 .card {
@@ -135,7 +122,7 @@ a {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 20px;
-  display: flex;                                        /* карт доторх элементүүд — flexbox */
+  display: flex;                                        
   flex-direction: column;
   gap: 8px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -156,7 +143,7 @@ a {
 .card p {
   margin: 0;
   color: var(--color-muted);
-  flex-grow: 1;                     /* тэмдэглэл доороо шахагдан тэгшлэгдэнэ */
+  flex-grow: 1;                     
 }
 
 .tag {
@@ -174,10 +161,9 @@ a {
   color: #92400e;
 }
 
-/* Картын доод мөр — FLEXBOX: meta + холбоос тэгшлэх */
 .card-foot {
   display: flex;
-  justify-content: space-between;     /* хоёр толгойн тэгшлэл */
+  justify-content: space-between;    
   align-items: center;
   gap: 8px;
   border-top: 1px dashed var(--color-border);
@@ -218,9 +204,6 @@ a {
   color: var(--color-muted);
 }
 
-/* =========================================================
-   ФОРМ: товчнууд — FLEXBOX
-   ========================================================= */
 .form-card {
   padding: 24px;
 }
@@ -261,10 +244,10 @@ a {
 }
 
 .form-actions {
-  display: flex;                      /* FLEXBOX */
-  justify-content: flex-start;        /* товчнуудыг эрэмбэлэх */
-  align-items: center;                /* тэгш байрлуулах */
-  gap: 12px;                          /* товчнуудын зай */
+  display: flex;                     
+  justify-content: flex-start;      
+  align-items: center;               
+  gap: 12px;                         
   flex-wrap: wrap;
 }
 
@@ -302,11 +285,8 @@ a {
   background-color: var(--color-bg);
 }
 
-/* =========================================================
-   SIDEBAR — widget-ууд (багана дээр бөөрөөрөө жагсаалт)
-   ========================================================= */
 .sidebar {
-  display: flex;                      /* FLEXBOX: widget-уудыг баганаар жагсуулах */
+  display: flex;                     
   flex-direction: column;
   gap: 20px;
   min-width: 0;
@@ -389,9 +369,6 @@ a {
   font-size: 14px;
 }
 
-/* =========================================================
-   FOOTER — FLEXBOX: текст + холбоосууд
-   ========================================================= */
 .site-footer {
   display: flex;                      /* FLEXBOX */
   justify-content: space-between;     /* хоёр толгой */
@@ -409,7 +386,7 @@ a {
 }
 
 .footer-links {
-  display: flex;                      /* FLEXBOX */
+  display: flex;                  
   gap: 16px;
   list-style: none;
   margin: 0;
@@ -426,12 +403,11 @@ a {
   text-decoration: underline;
 }
 
-/* =========================================================
-   УТАСНЫ ДЭЛГЭЦЭД ТОХИРСОН (responsive)
-   ========================================================= */
+/*UTASNII DELGETSEND TOHIRSON HEMJEES
+*/
 @media (max-width: 960px) {
   .page {
-    grid-template-columns: 1fr;       /* sidebar доогуур шилжинэ */
+    grid-template-columns: 1fr;       
   }
 
   .cards-grid {
@@ -441,7 +417,7 @@ a {
 
 @media (max-width: 600px) {
   .cards-grid {
-    grid-template-columns: 1fr;       /* нэг багана */
+    grid-template-columns: 1fr;      
   }
 
   .header-inner {
