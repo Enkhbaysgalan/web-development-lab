@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лаборатори 04: Flexbox &amp; Grid Layout</title>
+<!-- External CSS холболт -->
+<link rel="stylesheet" href="styles.css">
+<!-- Google Fonts: Noto Sans (Кирилл дэмжих) ба Roboto Slab -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Вэбийн толгой хэсэг -->
+<header class="site-header">
+  <!-- Flexbox: гарчиг + badge-ийг нэг мөрөнд тэгшлэх -->
+  <div class="header-inner">
+    <h1>Оюутны Бүртгэлийн Портал</h1>
+    <span class="badge">Лаб 04</span>
+  </div>
+  <!-- Шаардлага 1: Navigation bar — FLEXBOX -->
+  <nav class="site-nav">
+    <ul>
+      <li><a href="../index.html">Нүүр</a></li>
+      <li><a href="../lab02/index.html">Лаб 02</a></li>
+      <li><a href="../lab03/index.html">Лаб 03</a></li>
+      <li><a href="#">Анкет</a></li>
+      <li><a href="#">Тусламж</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Шаардлага 2: Үндсэн бүтэц — CSS GRID (агуулгын хэсэг + sidebar) -->
+<div class="page">
+  <!-- Үндсэн агуулга -->
+  <main class="main-content">
+    <!-- Грид карт хэсэг: 3+ багана -->
+    <section class="section-block">
+      <h2 class="section-title">Сургалтын чиглэлүүд</h2>
+      <p class="section-note">Доорх картууд <strong>CSS Grid</strong> ашиглан 3 баганатайгаар эрэмбэлэгдэнэ.</p>
+
+      <div class="cards-grid">
+        <article class="card">
+          <span class="tag">Анхан шат</span>
+          <h3>Веб хөгжүүлэлт</h3>
+          <p>HTML5, CSS3 болон JavaScript ашиглан орчин үеийн вэб хуудас бүтээх.</p>
+          <div class="card-foot">
+            <span class="meta">12 долоо хоног</span>
+            <a class="card-link" href="#">Дэлгэрэнгүй</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag tag-alt">Анхан шат</span>
+          <h3>График дизайн</h3>
+          <p>Лого, баннер, сошиал медиа постер зохион бүтээх практик дадлага.</p>
+          <div class="card-foot">
+            <span class="meta">8 долоо хоног</span>
+            <a class="card-link" href="#">Дэлгэрэнгүй</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Дунд шат</span>
+          <h3>Мэдээллийн сан</h3>
+          <p>MySQL ба PostgreSQL ашиглан хүчин чадалтай мэдээллийн сан зохион байгуулах.</p>
+          <div class="card-foot">
+            <span class="meta">10 долоо хоног</span>
+            <a class="card-link" href="#">Дэлгэрэнгүй</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag tag-alt">Дунд шат</span>
+          <h3>Мобайл аппликейшн</h3>
+          <p>React Native ашиглан Android/iOS аппликейшн хөгжүүлэх арга барил.</p>
+          <div class="card-foot">
+            <span class="meta">14 долоо хоног</span>
+            <a class="card-link" href="#">Дэлгэрэнгүй</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag">Дээд шат</span>
+          <h3>Кибер аюулгүй байдал</h3>
+          <p>Сүлжээний аюулгүй байдал, шифрлэлт болон эрсдэлийн үнэлгээний үндэс.</p>
+          <div class="card-foot">
+            <span class="meta">12 долоо хоног</span>
+            <a class="card-link" href="#">Дэлгэрэнгүй</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="tag tag-alt">Дээд шат</span>
+          <h3>Хиймэл оюун</h3>
+          <p>Машин сургалтын загвар боловсруулж бодит асуудалд хэрэгжүүлэх.</p>
+          <div class="card-foot">
+            <span class="meta">16 долоо хоног</span>
+            <a class="card-link" href="#">Дэлгэрэнгүй</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Жижиг форм: товчнууд — flexbox -->
+    <section class="section-block card form-card">
+      <h2 class="section-title">Шинэ суралцагч бүртгүүлэх</h2>
+      <form action="#" method="POST">
+        <div class="field">
+          <label class="field-label" for="fullname">Овог нэр:<span class="req">*</span></label>
+          <input class="field-input" type="text" id="fullname" name="fullname" placeholder="И. Болдбаатар" required minlength="2">
+        </div>
+        <div class="field">
+          <label class="field-label" for="email">Цахим хаяг:<span class="req">*</span></label>
+          <input class="field-input" type="email" id="email" name="email" placeholder="example@domain.com" required>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Бүртгүүлэх</button>
+          <button class="btn btn-secondary" type="reset">Цэвэрлэх</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Sidebar: баруун талын хэсэг (GRID-ийн 2-р багана) -->
+  <aside class="sidebar">
+    <section class="widget">
+      <h2 class="widget-title">Миний мэдээ</h2>
+      <dl class="info-list">
+        <dt>Нэр</dt><dd>Энх-Алдар</dd>
+        <dt>Мэргэжил</dt><dd>Веб хөгжүүлэгч</dd>
+        <dt>Түвшин</dt><dd>3-р курс</dd>
+      </dl>
+    </section>
+
+    <section class="widget">
+      <h2 class="widget-title">Гүйцэтгэл</h2>
+      <!-- Мини-грид: 2 багана -->
+      <div class="stats-grid">
+        <div class="stat"><strong>95%</strong><span>Веб зохиомж</span></div>
+        <div class="stat"><strong>88%</strong><span>Мэдээллийн сан</span></div>
+        <div class="stat"><strong>92%</strong><span>Алгоритм</span></div>
+        <div class="stat"><strong>90%</strong><span>Дундаж</span></div>
+      </div>
+    </section>
+
+    <section class="widget">
+      <h2 class="widget-title">Шинэ мэдээ</h2>
+      <ul class="news-list">
+        <li>Лаб 04 даалгавар эхлэв</li>
+        <li>Шинэ сургалтын хуваарийг нийтэллээ</li>
+        <li>Веб хөгжүүлэлтийн уралдаан зарлагдлаа</li>
+      </ul>
+    </section>
+  </aside>
+</div>
+
+<!-- Хөл хэсэг — flexbox: текст + холбоосуудыг тэгшлэх -->
+<footer class="site-footer">
+  <p>&copy; 2026 Веб зохиомж хичээл. Бүх эрх хуулиар хамгаалагдсан.</p>
+  <ul class="footer-links">
+    <li><a href="../index.html">Нүүр</a></li>
+    <li><a href="../lab03/index.html">Лаб 03</a></li>
+    <li><a href="#">Тусламж</a></li>
+  </ul>
+</footer>
+</body>
+</html>
